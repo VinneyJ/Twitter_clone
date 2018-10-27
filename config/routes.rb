@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  get 'users/new'
 
-  get 'static_pages/help'
+  get 'users/edit'
 
-  get 'static_pages/contactUs'
+  #get 'static pages/about'
+  resources :users
+  root "static_pages#home"
+
+  get "static_pages/contact"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
